@@ -1,12 +1,14 @@
 import './App.css';
-import { useGetCourseQuery } from './service/course';
+import { useGetCourseQuery, useGetCourseByIdQuery } from './service/course';
 
 function App() {
-  const { data } = useGetCourseQuery()
+  const { data: dataAll } = useGetCourseQuery()
+  const { data: dataById } = useGetCourseBQuery()
 
   return (
     <div>
-      {data ? <h2>{JSON.stringify(data)}</h2> : null}
+      {dataAll ? <h2>{JSON.stringify(dataAll)}</h2> : null}
+      {dataById ? <h2>{JSON.stringify(dataById)}</h2> : null}
     </div>
   );
 }
