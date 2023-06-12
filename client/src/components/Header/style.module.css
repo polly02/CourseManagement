@@ -1,0 +1,28 @@
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+    padding: 24px 0;
+    align-items: center;
+    background-color: #FFFFFF;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+}
+
+nav p {
+    font: 500 16px 'Inter';
+    color: #232134;
+}
+
+nav p:not(:last-child) {
+    margin-right: 20px;
+}
+
+nav a:hover {
+    color: #5E96FC;
+}

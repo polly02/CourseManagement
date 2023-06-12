@@ -1,0 +1,28 @@
+.wrapper {
+    border: 1px solid #EAEBED;
+    border-radius: 12px;
+    padding: 24px;
+    width: 448px;
+    margin-top: 20px;
+    background-color: #FFFFFF;
+}
+
+.wrapper h2{
+    font: 600 20px 'Inter';
+    color: #5E96FC;
+    margin-bottom: 12px;
+}
+
+.wrapper .location {
+    display: flex;
+    margin-top: 12px;
+}
+
+.icon {
+    background-image: url(./assets/M.svg);
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 10px;
+}
