@@ -26,3 +26,7 @@
     background-size: contain;
     margin-right: 10px;
 }
+
+.cards{
+    display: flex
+}

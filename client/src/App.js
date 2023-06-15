@@ -2,9 +2,9 @@
 // import { useGetCourseQuery, useGetCourseByIdQuery, useCreateCourseMutation, useUpdateCourseMutation, useDeleteCourseMutation } from './service/course';
 import { Route, Routes } from 'react-router-dom'
 import HomePage from './pages/HomePage/HomePage';
+import AdministrtaionPage from './pages/AdministrationPage/AdministrationPage';
 
 function App() {
-  // const { data: dataAll } = useGetCourseQuery()
   // const { data: dataById } = useGetCourseByIdQuery('8ff96270-062b-11ee-9d7e-1399db26ca6d')
   // const [createCourse] = useCreateCourseMutation()
   // const [updateCourse] = useUpdateCourseMutation()
@@ -25,9 +25,9 @@ function App() {
   return (
     <Routes>
       <Route path='/' element={<HomePage></HomePage>}></Route>
+      <Route path='/admin' element={<AdministrtaionPage></AdministrtaionPage>}></Route>
     </Routes>
     // <div>
-    //   {dataAll ? <h2>{JSON.stringify(dataAll)}</h2> : null}
     //   {dataById ? <h2>{JSON.stringify(dataById)}</h2> : null}
     //   <button onClick={sendData}>send data</button>
     //   <button onClick={updateData}>update data</button>

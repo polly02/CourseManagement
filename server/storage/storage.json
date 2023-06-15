@@ -1,10 +1,1 @@
-[
-    {
-        "id": "8ff96270-062b-11ee-9d7e-1399db26ca6d",
-        "email": "polina@mail.ru",
-        "pwd": "qwerty"
-    },
-    {
-        "id": "5e488a40-088c-11ee-a0cb-9541bccd7d5a"
-    }
-]
+[{"id":"00a693d0-0b9a-11ee-8da1-e1f280eff98a","course":"C#","info":"jhsvfks","location":"minsk"},{"id":"b5e65fa0-0ba4-11ee-99ef-2938aa364708","course":"JS","info":"jhsvfks","location":"minsk"},{"id":"ba889780-0ba4-11ee-b532-f5ca5ab8871c","course":"Java","info":"jhsvfks","location":"minsk"},{"id":"c8b43760-0ba4-11ee-8e60-45fb661256c0","course":"C++","info":"jhsvfks","location":"minsk"},{"id":"cddb56b0-0ba4-11ee-80aa-ad141969eab0","course":"Ruby","info":"jhsvfks","location":"minsk"},{"id":"2a9d93e0-0baa-11ee-b7b9-8780e7fc7a97","vacation":"JavaS","info":"course","location":"Minsk"},{"id":"6d1bfa40-0baa-11ee-8d9f-5d192f9d3d96","course":"JavaSc","info":"info","location":"Grodno"}]

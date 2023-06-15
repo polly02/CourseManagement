@@ -1,14 +1,15 @@
 import style from './style.module.css'
 
 
-function ContentItem() {
+function ContentItem({ course, info, location }) {
+
     return (
         <div className={style.wrapper}>
-            <h2>C# Course</h2>
-            <p>В течение курса студенты ознакомятся с ...</p>
+            <h2>{course}</h2>
+            <p>{info}</p>
             <div className={style.location}>
                 <div className={style.icon}></div>
-                <p>Минск</p>
+                <p>{location}</p>
             </div>
         </div>
     )
