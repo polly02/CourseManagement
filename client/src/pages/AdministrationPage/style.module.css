@@ -4,3 +4,11 @@
     width: 50%;
     margin: 110px auto 0;
 }
+
+.navigation p {
+    cursor: pointer;
+}
+
+.navigation p:hover {
+    color: #5E96FC;
+}

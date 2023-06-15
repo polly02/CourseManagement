@@ -18,7 +18,7 @@ function CrudOperation() {
     return (
         <div className={style.wrapper}>
             <Input name="course" placeholder="Course" onChange={changeInputValue} />
-            <Input name="info" placeholder="Info" onChange={changeInputValue} />
+            <Input name="info" placeholder="Information" onChange={changeInputValue} />
             <Input name="location" placeholder="Location" onChange={changeInputValue} />
             <Button onClick={sendRequest}>Применить</Button>
         </div>
