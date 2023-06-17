@@ -12,7 +12,7 @@ function Content({ searchString }) {
 
     const [list, setList] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const pageSizeRef = useRef(4);
+    const pageSizeRef = useRef(6);
 
     const filterCourse = () => {
         if (!searchString) return dataAll ?? [];
@@ -43,7 +43,7 @@ function Content({ searchString }) {
                     ></ContentItem>
                 ))}
             </div>
-            <Pagination
+            <Pagination className={style.pages}
                 total={Math.ceil(list.length / pageSizeRef.current)}
                 value={currentPage}
                 onChange={(page) => setCurrentPage(page)}

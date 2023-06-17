@@ -5,6 +5,8 @@
     width: 448px;
     margin-top: 20px;
     background-color: #FFFFFF;
+    margin-right: 40px;
+    margin-left: 5%;
 }
 
 .wrapper h2{
@@ -28,5 +30,12 @@
 }
 
 .cards{
-    display: flex
+    display: flex; 
+    flex-direction: row; 
+	flex-wrap: wrap;
+    margin: auto;
+}
+
+.pages {
+    margin-top: 45px;
 }
