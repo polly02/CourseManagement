@@ -3,10 +3,10 @@ import { Button, Input } from '@mantine/core';
 import style from './style.module.css'
 import { useState } from 'react';
 
-function Search({setSearchString}) {
+function Search({ setSearchString }) {
     const [input, setInput] = useState("")
 
-    function SearchInput(){
+    function SearchInput() {
         setSearchString(input)
     }
     return (
