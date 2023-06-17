@@ -28,5 +28,11 @@
         "course": "Ruby",
         "info": "jhsvfks",
         "location": "minsk"
+    },
+    {
+        "id": "c4e97270-0d12-11ee-a1e1-2d636057e958",
+        "course": "C",
+        "info": "info",
+        "location": "Riga"
     }
 ]

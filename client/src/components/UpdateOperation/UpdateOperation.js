@@ -5,14 +5,14 @@ import { useState } from 'react';
 
 function UpdateOperation() {
     const [updateCourse] = useUpdateCourseMutation()
-    const [value, setValue] = useState( { course: "", info: "", location: "", })
+    const [value, setValue] = useState({id: ""}, { course: "", info: "", location: "", })
 
     function sendRequest() {
-        updateCourse( value)
+        updateCourse(value)
     }
 
     function changeInputValue(event) {
-        setValue({ ...value, [event.target.name]: event.target.value })
+        setValue(value, { ...value, [event.target.name]: event.target.value })
     }
 
     return (
