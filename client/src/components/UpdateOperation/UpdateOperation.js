@@ -1,28 +1,49 @@
-import { Input, Button } from '@mantine/core';
+import { Input, Button, Select } from '@mantine/core';
 import style from './style.module.css'
-import { useUpdateCourseMutation } from '../../service/course'
+import { useGetCourseByIdQuery, useGetCourseQuery, useUpdateCourseMutation } from '../../service/course'
 import { useState } from 'react';
 
 function UpdateOperation() {
+    const { data: courses } = useGetCourseQuery()
     const [updateCourse] = useUpdateCourseMutation()
-    const [valueId, setValueId] = useState("")
-    const [value, setValue] = useState({ course: "", info: "", location: "", })
 
-    function sendRequest() {
-        updateCourse(valueId ,value)
+    const [value, setValue] = useState({ id: "", course: "", info: "", location: "", })
+    const { data: foundCourse } = useGetCourseByIdQuery(value?.id)
+
+    function changeValue(event) {
+        setValue({ ...value, [event.target.name]: event.target.value })
     }
 
-    function changeInputValue(event) {
-        setValue({ ...value, [event.target.name]: event.target.value })
+    function sendRequest() {
+        updateCourse(value)
+        window.location.reload()
     }
 
     return (
         <div className={style.wrapper}>
-            <Input name="id" placeholder="ID" onChange={(event) => setValueId(event.target.value)} />
-            <Input name="course" placeholder="Course" onChange={changeInputValue} />
-            <Input name="info" placeholder="Information" onChange={changeInputValue} />
-            <Input name="location" placeholder="Location" onChange={changeInputValue} />
-            <Button onClick={sendRequest}>Применить</Button>
+            <div>
+                <Select
+                    name="id"
+                    label="До"
+                    placeholder="Pick one"
+                    data={courses?.map((el) => el.id) ?? []}
+                    onChange={(event) => setValue({ ...value, id: event })}
+                />
+
+                <div>
+                    <Input value={foundCourse?.course} disabled></Input>
+                    <Input value={foundCourse?.info} disabled></Input>
+                    <Input value={foundCourse?.location} disabled></Input>
+                </div>
+
+            </div>
+            <div>
+
+                <Input name="course" placeholder="Course" onChange={changeValue} />
+                <Input name="info" placeholder="Information" onChange={changeValue} />
+                <Input name="location" placeholder="Location" onChange={changeValue} />
+                <Button onClick={sendRequest}>Применить</Button>
+            </div>
         </div>
     )
 }
