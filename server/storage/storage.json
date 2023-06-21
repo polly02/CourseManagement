@@ -1,1 +1,44 @@
-[{"id":"00a693d0-0b9a-11ee-8da1-e1f280eff98a","course":"TypeScript","info":"main course","location":"Belarus"},{"id":"b5e65fa0-0ba4-11ee-99ef-2938aa364708","course":"JS","info":"jhsvfks","location":"minsk"},{"id":"ba889780-0ba4-11ee-b532-f5ca5ab8871c","course":"Java","info":"jhsvfks","location":"minsk"},{"id":"c8b43760-0ba4-11ee-8e60-45fb661256c0","course":"C++","info":"jhsvfks","location":"minsk"},{"id":"cddb56b0-0ba4-11ee-80aa-ad141969eab0","course":"Ruby","info":"jhsvfks","location":"minsk"},{"id":"c4e97270-0d12-11ee-a1e1-2d636057e958"},{"id":"8c041580-1075-11ee-9713-89d99b56b231","course":"Assembler","info":"old language","location":"Brest"},{"id":"b75e6960-1075-11ee-8835-e994df23f91a","course":"C","info":"course for students","location":"Minsk"}]
+[
+    {
+        "id": "00a693d0-0b9a-11ee-8da1-e1f280eff98a",
+        "course": "TypeScript",
+        "info": "main course",
+        "location": "Belarus"
+    },
+    {
+        "id": "b5e65fa0-0ba4-11ee-99ef-2938aa364708",
+        "course": "JS",
+        "info": "jhsvfks",
+        "location": "minsk"
+    },
+    {
+        "id": "ba889780-0ba4-11ee-b532-f5ca5ab8871c",
+        "course": "Java",
+        "info": "jhsvfks",
+        "location": "minsk"
+    },
+    {
+        "id": "c8b43760-0ba4-11ee-8e60-45fb661256c0",
+        "course": "C++",
+        "info": "jhsvfks",
+        "location": "minsk"
+    },
+    {
+        "id": "cddb56b0-0ba4-11ee-80aa-ad141969eab0",
+        "course": "Ruby",
+        "info": "jhsvfks",
+        "location": "minsk"
+    },
+    {
+        "id": "8c041580-1075-11ee-9713-89d99b56b231",
+        "course": "Assembler",
+        "info": "old language",
+        "location": "Brest"
+    },
+    {
+        "id": "b75e6960-1075-11ee-8835-e994df23f91a",
+        "course": "C",
+        "info": "course for students",
+        "location": "Minsk"
+    }
+]

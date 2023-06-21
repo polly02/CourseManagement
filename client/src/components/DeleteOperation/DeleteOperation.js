@@ -1,23 +1,40 @@
-import { Input, Button } from '@mantine/core';
+import { Input, Button, Select } from '@mantine/core';
 import style from './style.module.css'
-import { useDeleteCourseMutation } from '../../service/course'
+import { useGetCourseByIdQuery, useGetCourseQuery, useDeleteCourseMutation } from '../../service/course'
 import { useState } from 'react';
 
 function DeleteOperation() {
+    const { data: courses } = useGetCourseQuery()
     const [deleteCourse] = useDeleteCourseMutation()
-    const [value, setValue] = useState("")
+
+    const [value, setValue] = useState({id: ""})
+    const { data: foundCourse } = useGetCourseByIdQuery(value?.id)
+
 
     function sendRequest() {
-        deleteCourse(value)
+        deleteCourse(value.id)
+        window.location.reload()
     }
 
-    function changeInputValue(event) {
-        setValue(event.target.value)
-    }
     return (
         <div className={style.wrapper}>
-            <Input name="id" placeholder="ID" onChange={changeInputValue} />
-            <Button onClick={sendRequest}>Применить</Button>
+            <div className={style.before}>
+                <Select
+                    name="id"
+                    placeholder="Pick one"
+                    data={courses?.map((el) => el.id) ?? []}
+                    onChange={(event) => setValue({ ...value, id: event })}
+                />
+                <div>
+                    <Input value={foundCourse?.course} disabled></Input>
+                    <Input value={foundCourse?.info} disabled></Input>
+                    <Input value={foundCourse?.location} disabled></Input>
+                </div>
+            </div>
+            <div>
+                {/* <Input name="id" placeholder="ID" onChange={changeInputValue} /> */}
+                <Button onClick={sendRequest}>Применить</Button>
+            </div>
         </div>
     )
 }

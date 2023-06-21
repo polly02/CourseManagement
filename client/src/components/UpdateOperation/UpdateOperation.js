@@ -21,7 +21,7 @@ function UpdateOperation() {
 
     return (
         <div className={style.wrapper}>
-            <div>
+            <div className={style.before}>
                 <Select
                     name="id"
                     label="До"
@@ -29,16 +29,15 @@ function UpdateOperation() {
                     data={courses?.map((el) => el.id) ?? []}
                     onChange={(event) => setValue({ ...value, id: event })}
                 />
-
                 <div>
                     <Input value={foundCourse?.course} disabled></Input>
                     <Input value={foundCourse?.info} disabled></Input>
                     <Input value={foundCourse?.location} disabled></Input>
                 </div>
-
             </div>
-            <div>
 
+            <div>
+                <p>После</p>
                 <Input name="course" placeholder="Course" onChange={changeValue} />
                 <Input name="info" placeholder="Information" onChange={changeValue} />
                 <Input name="location" placeholder="Location" onChange={changeValue} />

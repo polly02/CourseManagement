@@ -5,6 +5,11 @@
 
 .wrapper input {
     margin-bottom: 25px;
-    width: 640px;
+    width: 500px;
+}
 
+.wrapper .before {
+    margin-right: 70px;
+    margin-left: 60px;
+    margin-top: -6px;
 }
