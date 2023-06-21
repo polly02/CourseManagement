@@ -9,6 +9,7 @@ function CrudOperation() {
 
     function sendRequest() {
         createCourse(value)
+        window.location.reload()
     }
 
     function changeInputValue(event) {
